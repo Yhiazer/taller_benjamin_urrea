@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+        "navbar" auto
+        "main" 1fr
+        "footer" auto;
+}
+
+nav {
+    height: 5rem;
+    top: 0;
+    grid-area: navbar;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+nav .icono{
+    width: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+}
+
+.principal{
+    background-image: url("../recursos/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h5{
+    font-weight: bold;
+}
+
+.divisor{
+    padding: 5rem;
+}
+
+.divisor h3{
+    text-align: center;
+    color: gray;
+}
+
+.browse{
+    margin: 8%;
+    display: grid;
+    grid-template: 
+    "titulo titulo titulo"
+    "card card2 card3";
+    gap: 40px;
+}
+
+.browse h1{
+    text-align: center;
+    font-weight: bold;
+    padding: 5rem;
+}
+
+.browse .card-body{
+    text-align: center;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.our-pr h1{
+    text-align: center;
+    font-weight: bold;
+    padding: 5rem;
+}
+
+.productos {
+    margin: 8%;
+    display: grid;
+    grid-template: 
+    "card card2 card3 card4"
+    "card5 card6 card7 card8";
+    gap: 40px;
+}
+
+.productos button{
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(255, 255, 255);
+    padding: 2em;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template:
+    "ft-info1 ft-info2 ft-info3 ft-info4"
+    "ft-info5 ft-info5 ft-info5 ft-info5";
+}
+
+@media (max-width: 768px) {
+    body{
+        grid-template: 
+        "navbar" auto
+        "main" 1fr
+        "footer" auto;
+    }
+
+    .browse{
+        grid-template: 
+        "titulo"
+        "card"
+        "card2"
+        "card3";
+    }
+    .productos{
+        grid-template:
+        "card"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    }
+    footer{
+        grid-template: 
+        "ft-info1"
+        "ft-info2"
+        "ft-info3"
+        "ft-info4"
+        "ft-info5";
+    }
+}
